@@ -1,0 +1,114 @@
+$mob: 320px;
+$pl: 768px;
+
+.servicebar {
+  width: auto;
+  border-top: solid 1px #d9fff5;
+  margin-bottom: 32px;
+
+  @media (min-width: $mob) {
+    display: none;
+  }
+
+  @media (min-width: $pl) {
+    display: block;
+  }
+
+  .servicebar__title {
+    padding: 16px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7e7e82;
+    background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 98.61%);
+  }
+
+  .servicebar__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    grid-gap: 16px;
+    justify-content: space-between;
+    padding: 24px;
+    height: 148px;
+    overflow-y: hidden;
+  }
+
+  .full-screen {
+    height: auto;
+    max-height: auto;
+    overflow-y: visible;
+  }
+}
+
+.serviceswiper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-top: solid 1px #d9fff5;
+
+  @media (min-width: $pl) {
+    display: none;
+  }
+
+  .serviceswiper__title {
+    padding: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
+  }
+
+  .serviceswiper__wrapper {
+    margin-left: 16px;
+  }
+
+  .serviceswiper__pagination {
+    position: relative;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    margin-top: 20px;
+  }
+}
+
+.serviceswiper::after {
+  z-index: 100;
+  position: absolute;
+  content: " ";
+  right: 0;
+  bottom: 20px;
+  width: 24px;
+  height: 166px;
+  background: linear-gradient(
+    270deg,
+    #f8f8f8 16.84%,
+    rgba(248, 248, 248, 0.0001) 100%
+  );
+}
+
+.servicecard {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  width: 240px;
+  height: 160px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  .servicecard__text {
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    align-self: flex-start;
+  }
+
+  .servicecard__button {
+    align-self: flex-end;
+  }
+}

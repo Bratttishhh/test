@@ -1,0 +1,128 @@
+$dt: 1120px;
+
+.feedback {
+  z-index: 100;
+  transform: translateX(440px);
+  transition: all 0.3s ease-out;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  padding: 24px 16px;
+  width: 320px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  @media (min-width: $dt) {
+    width: 440px;
+    padding-top: 0;
+  }
+
+  .feedback__button-close {
+    @media (min-width: $dt) {
+      display: none;
+    }
+  }
+
+  .feedback__form {
+    position: relative;
+  }
+
+  .feedback__title {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1b1c21;
+  }
+
+  .feedback__title::before {
+    position: absolute;
+    left: 0;
+    vertical-align: middle;
+    content: url(../img/sidebar/highlight.svg);
+  }
+
+  .feedback__form {
+    margin-top: 24px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .feedback__input-name,
+  .feedback__input-phone,
+  .feedback__input-email,
+  .feedback__input-message {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    width: auto;
+  }
+
+  .feedback__input-name,
+  .feedback__input-phone,
+  .feedback__input-email {
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .feedback__input-message {
+    resize: none;
+    padding: 12px 16px;
+    height: 118px;
+    vertical-align: text-top;
+  }
+
+  .feedback__input-name::placeholder,
+  .feedback__input-phone::placeholder,
+  .feedback__input-email::placeholder,
+  .feedback__input-message::placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #b5b6bc;
+  }
+}
+
+.feedback::-webkit-scrollbar {
+  display: none;
+}
+
+.feedback-active {
+  transform: translateX(0);
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+
+  .privacypolicy {
+    font-size: 14px;
+    line-height: 16px;
+    color: #7e7e82;
+
+    .privacypolicy__select {
+      color: #ff3e79;
+    }
+  }
+
+  .feedback__input-send {
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+    width: 136px;
+    height: 32px;
+    background: #ff3e79;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
